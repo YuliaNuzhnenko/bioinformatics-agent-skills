@@ -1,49 +1,80 @@
 # Bioinformatics & Scientific AI Agent Skills 🤖🧬
 
-[![AI Agent Skills](https://img.shields.io/badge/Agent_Skills-Bioinformatics-00f0ff?style=flat-square)](#)
+[![Agent Skills Standard](https://img.shields.io/badge/Standard-Agent%20Skills-00f0ff?style=flat-square)](https://agentskills.io)
+[![Total Skills](https://img.shields.io/badge/Skills-12%20Production%20Skills-purple?style=flat-square)](#)
 [![Compatibility](https://img.shields.io/badge/Compatible-Cursor%20%2F%20Claude%20Code%20%2F%20Antigravity-0d1117?style=flat-square)](#)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
-An open-source library of ready-to-use **AI Agent Skills, System Prompts, and Workflow Protocols** for transforming LLM agents (Cursor, Claude Code, Antigravity, LangChain, CrewAI) into autonomous **AI Scientists** for Bioinformatics, Genomics, Structural Biology, and Drug Discovery.
+The premier open-source collection of specialized **AI Agent Skills, Tool Specifications, and Prompt Protocols** for **Bioinformatics, Genomics, Structural Biology, Metagenomics, and AI Drug Discovery**. 
+
+Designed to transform LLM Coding Agents (**Cursor, Claude Code CLI, Google Antigravity, OpenAI Codex, Gemini CLI, LangChain**) into autonomous, domain-expert **AI Scientists**.
 
 ---
 
-## 📑 Table of Agent Skills
+## 📋 Available Agent Skills Directory
 
-| Category | Agent Skill | Target Tools / APIs | File Path |
+| Skill Name | Target Domain | Supported Tools & APIs | Skill Documentation |
 | :--- | :--- | :--- | :--- |
-| **Transcriptomics** | `rna-seq-dge-analyzer` | DESeq2, limma, Volcano Plots | `skills/rna_seq_dge.md` |
-| **Single-Cell Omics** | `scrna-scanpy-cluster` | Scanpy, Harmony, UMAP | `skills/scrna_scanpy.md` |
-| **Structural Biology** | `alphafold-pocket-evaluator` | AlphaFold DB, py3Dmol, PDB | `skills/alphafold_pocket.md` |
-| **Clinical Genomics** | `vcf-variant-annotator` | Ensembl VEP, ClinVar, Open Targets | `skills/vcf_annotation.md` |
-| **Biomedical RAG** | `pubmed-literature-synthesizer` | PubMed API, BioBERT, FAISS | `skills/pubmed_rag.md` |
-| **Cheminformatics** | `rdkit-qsar-ic50-predictor` | RDKit, ECFP4, LightGBM | `skills/qsar_ic50.md` |
+| **`scanpy-sc-analyzer`** | Single-Cell Genomics | Scanpy, Harmony, AnnData, UMAP | [`skills/scanpy-sc-analyzer/SKILL.md`](skills/scanpy-sc-analyzer/SKILL.md) |
+| **`pydeseq2-bulk-rna`** | Bulk RNA-Seq Transcriptomics | PyDESeq2, DESeq2, limma, Volcano Plots | [`skills/pydeseq2-bulk-rna/SKILL.md`](skills/pydeseq2-bulk-rna/SKILL.md) |
+| **`alphafold-pocket-evaluator`** | Structural Biology | AlphaFold DB, py3Dmol, Biopython, FreeSASA | [`skills/alphafold-pocket-evaluator/SKILL.md`](skills/alphafold-pocket-evaluator/SKILL.md) |
+| **`ensembl-vep-variant-annotator`** | Clinical Genomics | Ensembl VEP API, ClinVar, Open Targets | [`skills/ensembl-vep-variant-annotator/SKILL.md`](skills/ensembl-vep-variant-annotator/SKILL.md) |
+| **`rdkit-qsar-pharmacophore`** | AI Drug Discovery | RDKit, ECFP4 Fingerprints, LightGBM, SHAP | [`skills/rdkit-qsar-pharmacophore/SKILL.md`](skills/rdkit-qsar-pharmacophore/SKILL.md) |
+| **`pubmed-rag-synthesizer`** | Biomedical AI | PubMedBERT, FAISS Vector Search, EUtils | [`skills/pubmed-rag-synthesizer/SKILL.md`](skills/pubmed-rag-synthesizer/SKILL.md) |
+| **`nextflow-dsl2-generator`** | Cloud HPC & Workflows | Nextflow DSL2, Docker, AWS Batch, SLURM | [`skills/nextflow-dsl2-generator/SKILL.md`](skills/nextflow-dsl2-generator/SKILL.md) |
+| **`gatk4-somatic-variant-caller`** | Somatic Variant Calling | GATK4 Mutect2, SAMtools, BCFtools | [`skills/gatk4-somatic-variant-caller/SKILL.md`](skills/gatk4-somatic-variant-caller/SKILL.md) |
+| **`qiime2-16s-microbiome`** | Metagenomics | QIIME2, DADA2, scikit-bio, SILVA | [`skills/qiime2-16s-microbiome/SKILL.md`](skills/qiime2-16s-microbiome/SKILL.md) |
+| **`diffdock-virtual-screener`** | AI Docking & Screening | DiffDock, PyTorch, RDKit, AlphaFold | [`skills/diffdock-virtual-screener/SKILL.md`](skills/diffdock-virtual-screener/SKILL.md) |
+| **`tcga-cibersort-deconv`** | Cancer Microenvironment | TCGAbiolinks, CIBERSORT, limma | [`skills/tcga-cibersort-deconv/SKILL.md`](skills/tcga-cibersort-deconv/SKILL.md) |
+| **`card-amr-profiler`** | Microbiology & AMR | CARD Database, ResFinder, RGI | [`skills/card-amr-profiler/SKILL.md`](skills/card-amr-profiler/SKILL.md) |
 
 ---
 
-## 🚀 How to Use Skills in AI Coding Agents
+## 🎯 Getting Started & Installation
 
-### 1. For Cursor / Antigravity Agents
-Copy any skill markdown block from `skills/` into your project `.cursorrules` or Agent configuration file.
-
-### 2. For Claude Code CLI
+### Option 1: Using `npx` (Supported Agent Hosts)
+Install skills into your agent host in a single command:
 ```bash
-claude --prompt "$(cat skills/vcf_annotation.md) Analyze sample.vcf.gz"
+npx skills add YuliaNuzhnenko/bioinformatics-agent-skills
+```
+
+### Option 2: GitHub CLI (`gh skill`)
+```bash
+gh skill install YuliaNuzhnenko/bioinformatics-agent-skills
+```
+
+### Option 3: Manual Project Configuration (Cursor / Antigravity / Claude Code)
+Clone this repository directly into your user or project agent skills directory:
+```bash
+git clone https://github.com/YuliaNuzhnenko/bioinformatics-agent-skills.git ~/.agents/skills/bioinformatics-agent-skills
 ```
 
 ---
 
-## 🧬 Sample Skill: Clinical VCF Variant Annotator
+## 🤖 Agent Execution Examples
 
-```yaml
-skill_name: vcf-variant-annotator
-description: Instructs AI agents to parse VCF variant data, query ClinVar/Ensembl VEP, and format precision oncology summaries.
-input_spec: VCF variant coordinates (CHROM, POS, REF, ALT)
-output_spec: JSON & Markdown report with ClinVar pathogenicity and FDA targeted drug mappings.
+### 1. Single-Cell RNA-Seq Workflow
+```
+Prompt: "Use scanpy-sc-analyzer skill to filter low-quality cells, run Harmony batch correction, and project UMAP clustering."
+```
+
+### 2. Clinical VCF Variant Prioritization
+```
+Prompt: "Use ensembl-vep-variant-annotator skill to annotate pathogenic driver mutations in sample.vcf.gz and map approved therapies."
 ```
 
 ---
+
+## 🛡 Security & Verification
+
+All Agent Skills in this repository undergo strict schema validation against the canonical `Agent Skills` specification. No malicious code or hidden telemetry is included.
+
+---
+
+## 🤝 Contributing
+
+Contributions from the computational biology and AI research communities are welcome! Feel free to submit Pull Requests with new `SKILL.md` definitions.
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
