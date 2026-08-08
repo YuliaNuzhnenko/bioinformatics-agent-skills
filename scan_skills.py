@@ -17,7 +17,7 @@ def scan_skills(skills_dir="skills"):
     errors = []
     
     print("==================================================")
-    print(" 🤖 Bioinformatics Agent Skills Validator")
+    print(" Bioinformatics Agent Skills Validator")
     print("==================================================\n")
     
     for root, dirs, files in os.walk(skills_dir):
@@ -46,7 +46,7 @@ def scan_skills(skills_dir="skills"):
                         errors.append(f"{filepath}: Missing 'name' or 'description' in frontmatter")
                         continue
                         
-                    print(f"  ✅ [VALID] {name:<30} (v{version}) - {root}")
+                    print(f"  [VALID] {name:<30} (v{version}) - {root}")
                     valid_count += 1
                     
                 except Exception as e:
@@ -56,7 +56,7 @@ def scan_skills(skills_dir="skills"):
     if errors:
         print(f"Encountered {len(errors)} Errors:")
         for err in errors:
-            print(f"  ❌ {err}")
+            print(f"  [ERROR] {err}")
         sys.exit(1)
     else:
         print(" All skills passed schema validation successfully!")

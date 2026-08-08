@@ -3,6 +3,7 @@
 [![Agent Skills Standard](https://img.shields.io/badge/Standard-Agent%20Skills-00f0ff?style=flat-square)](https://agentskills.io)
 [![Total Skills](https://img.shields.io/badge/Skills-12%20Production%20Skills-purple?style=flat-square)](#)
 [![Compatibility](https://img.shields.io/badge/Compatible-Cursor%20%2F%20Claude%20Code%20%2F%20Antigravity-0d1117?style=flat-square)](#)
+[![CI Test Suite](https://github.com/YuliaNuzhnenko/bioinformatics-agent-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/YuliaNuzhnenko/bioinformatics-agent-skills/actions)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 An open-source collection of specialized **AI Agent Skills, Tool Specifications, and Prompt Protocols** for **Bioinformatics, Genomics, Structural Biology, Metagenomics, and AI Drug Discovery**. 
@@ -47,6 +48,34 @@ gh skill install YuliaNuzhnenko/bioinformatics-agent-skills
 Clone this repository directly into your user or project agent skills directory:
 ```bash
 git clone https://github.com/YuliaNuzhnenko/bioinformatics-agent-skills.git ~/.agents/skills/bioinformatics-agent-skills
+```
+
+---
+
+## 🖥 Actual Executed Console Output
+
+When running `python scan_skills.py` locally:
+
+```text
+==================================================
+ Bioinformatics Agent Skills Validator
+==================================================
+
+  [VALID] alphafold-pocket-evaluator     (v1.0.0) - skills\alphafold-pocket-evaluator
+  [VALID] card-amr-profiler              (v1.0.0) - skills\card-amr-profiler
+  [VALID] diffdock-virtual-screener      (v1.0.0) - skills\diffdock-virtual-screener
+  [VALID] ensembl-vep-variant-annotator  (v1.0.0) - skills\ensembl-vep-variant-annotator
+  [VALID] gatk4-somatic-variant-caller   (v1.0.0) - skills\gatk4-somatic-variant-caller
+  [VALID] nextflow-dsl2-generator        (v1.0.0) - skills\nextflow-dsl2-generator
+  [VALID] pubmed-rag-synthesizer         (v1.0.0) - skills\pubmed-rag-synthesizer
+  [VALID] pydeseq2-bulk-rna              (v1.0.0) - skills\pydeseq2-bulk-rna
+  [VALID] qiime2-16s-microbiome          (v1.0.0) - skills\qiime2-16s-microbiome
+  [VALID] rdkit-qsar-pharmacophore       (v1.0.0) - skills\rdkit-qsar-pharmacophore
+  [VALID] scanpy-sc-analyzer             (v1.0.0) - skills\scanpy-sc-analyzer
+  [VALID] tcga-cibersort-deconv          (v1.0.0) - skills\tcga-cibersort-deconv
+
+Total Valid Skills Processed: 12
+ All skills passed schema validation successfully!
 ```
 
 ---
