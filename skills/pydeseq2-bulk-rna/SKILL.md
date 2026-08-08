@@ -32,16 +32,21 @@ When an AI Agent is tasked with `pydeseq2-bulk-rna`:
 
 ```python
 import pandas as pd
-import numpy as np
+from pydeseq2.dds import DeseqDataSet
+from pydeseq2.ds import DeseqStats
 
-def run_dge(counts_df, metadata_df):
-    # Simulated DGE pipeline
-    df = counts_df.copy()
-    df['log2FoldChange'] = np.random.normal(0, 1.5, len(df))
-    df['pvalue'] = np.random.uniform(0.0001, 0.5, len(df))
-    df['padj'] = df['pvalue'] * 1.2
-    return df
-
+def run_dge(counts_df, metadata_df, design_factors="condition"):
+    # Real PyDESeq2 Differential Expression Pipeline
+    dds = DeseqDataSet(
+        counts=counts_df,
+        metadata=metadata_df,
+        design_factors=design_factors
+    )
+    dds.deseq2()
+    
+    stat_res = DeseqStats(dds, contrast=["condition", "treated", "control"])
+    stat_res.summary()
+    return stat_res.results_df
 ```
 
 ---
