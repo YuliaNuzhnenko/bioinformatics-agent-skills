@@ -5,7 +5,7 @@
 [![Compatibility](https://img.shields.io/badge/Compatible-Cursor%20%2F%20Claude%20Code%20%2F%20Antigravity-0d1117?style=flat-square)](#)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
-The premier open-source collection of specialized **AI Agent Skills, Tool Specifications, and Prompt Protocols** for **Bioinformatics, Genomics, Structural Biology, Metagenomics, and AI Drug Discovery**. 
+An open-source collection of specialized **AI Agent Skills, Tool Specifications, and Prompt Protocols** for **Bioinformatics, Genomics, Structural Biology, Metagenomics, and AI Drug Discovery**. 
 
 Designed to transform LLM Coding Agents (**Cursor, Claude Code CLI, Google Antigravity, OpenAI Codex, Gemini CLI, LangChain**) into autonomous, domain-expert **AI Scientists**.
 
